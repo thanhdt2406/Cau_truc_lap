@@ -6,19 +6,35 @@
 </head>
 <body>
 <script>
-    let text = "Dãy fibonaci: <br> 0, 1, ";
-    let n1=0;
-    let n2=1;
-    count = 0;
-    let temp;
-    while(count<=100){
-        temp=n1;
-        n1=n2;
-        n2=temp+n1;
-        text+=n2 +", ";
-        count++;
+    let number = parseInt(prompt("Nhập số lượng phần tử của dãy fibonaci muốn in ra:"));
+    while(number<=0){
+        number = parseInt(prompt("Lỗi nhập, mời nhập lại:"));
+    }
+    let text = number + " phần tử đầu tiên của dãy fibonaci là: <br>";
+    if(number===1){
+        text+="0.";
+    } else if(number===2){
+        text+="0, 1.";
+    } else{
+        text+="0, 1, ";
+        let n1=0;
+        let n2=1;
+        let temp;
+        for(let count=0;count<number-2;count++){
+            temp=n1;
+            n1=n2;
+            n2=temp+n1;
+            text+=n2;
+            if(count===number-3){
+                text+=".";
+            } else{
+                text+=", ";
+            }
+        }
+
     }
     document.write(text);
+
 </script>
 </body>
 </html>

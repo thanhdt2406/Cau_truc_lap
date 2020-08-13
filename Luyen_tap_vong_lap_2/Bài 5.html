@@ -9,6 +9,12 @@
     let presentValue=parseInt(prompt("Enter present value:"));
     let month=parseInt(prompt("Enter month:"));
     let rate=parseInt(prompt("Enter rate (%):"));
+    while(presentValue<=0||month<=0||rate<=0){
+        alert("Error. Try again!!!");
+        presentValue=parseInt(prompt("Enter present value:"));
+        month=parseInt(prompt("Enter month:"));
+        rate=parseInt(prompt("Enter rate (%):"));
+    }
     for(let i=0;i<month;i++){
         presentValue += presentValue *rate/100;
     }

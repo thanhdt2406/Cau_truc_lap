@@ -7,6 +7,9 @@
 <body>
 <script>
     let number = parseInt(prompt("Nhập số lượng số nguyên tố đầu tiên muốn in: "));
+    while (number<=0){
+        number = parseInt(prompt("Lỗi nhập, mời nhập lại: "));
+    }
     let count = 0;
     let text ="";
     let n=2;
