@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập một số nguyên dương:"));
+    let fact = 1;
+    if(n===0){
+        alert("0! = 1");
+    } else{
+        for(let i=1;i<=n;i++){
+            fact *= i;
+        }
+        alert(n+"! = "+fact);
+    }
+</script>
+</body>
+</html>

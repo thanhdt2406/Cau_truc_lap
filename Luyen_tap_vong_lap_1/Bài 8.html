@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<button type="button" onclick="game()">Start</button>
+<script>
+    function game() {
+        let min = parseInt(prompt("Nhập khoảng bạn muốn: Min: "));
+        let max = parseInt(prompt("Nhập khoảng bạn muốn: Max: "));
+        let rdNum = Math.round(Math.random()*(max-min)+min);
+        let inputNum ;
+        let reset = 0;
+        while(reset<3){
+            inputNum = parseInt(prompt("Nhập số bạn đoán:"));
+            if(inputNum === rdNum){
+                alert("Congratulation! My number is: " +rdNum);
+                break;
+            } else if(inputNum<rdNum){
+                reset +=1;
+                alert("Your number is less than mine. Try again!");
+            } else {
+                alert("Your number is higher than mine. Try again!");
+                reset+=1
+            }
+        }
+        if(reset===3){
+            alert("You guessed wrong 3 times. Game over!!! My number is: "+rdNum);
+        }
+    }
+</script>
+</body>
+</html>

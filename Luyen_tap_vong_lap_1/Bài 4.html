@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    let n1=0;
+    let n2=1;
+    let temp;
+    let text ="Số đầu tiên của dãy fibonacci chia hết cho 5 là: ";
+    while(1){
+        if(n2%5==0){
+            text+=n2+".";
+            break;
+        }
+        temp=n1;
+        n1=n2;
+        n2=temp+n1;
+    }
+    document.write(text);
+</script>
+</body>
+</html>

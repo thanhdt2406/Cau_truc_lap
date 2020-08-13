@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let text = "Dãy fibonaci: <br> 0, 1, ";
+    let n1=0;
+    let n2=1;
+    count = 0;
+    let temp;
+    while(count<=100){
+        temp=n1;
+        n1=n2;
+        n2=temp+n1;
+        text+=n2 +", ";
+        count++;
+    }
+    document.write(text);
+</script>
+</body>
+</html>

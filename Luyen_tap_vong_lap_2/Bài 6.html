@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+
+    let a, b, size = 15;
+    let text = "";
+
+    for (a = size / 2; a <= size; a = a + 2) {
+        for (b = 1; b < size - a; b = b + 2) {
+            text += "&nbsp ";
+            document.write(text);
+            text = "";
+        }
+
+
+        for (b = 1; b <= a; b++) {
+            text += "*";
+            document.write(text);
+            text = "";
+        }
+
+
+        for (b = 1; b <= size - a; b++) {
+            text += "&nbsp ";
+            document.write(text);
+            text = "";
+        }
+
+
+        for (b = 1; b <= a - 1; b++) {
+            text += "*";
+            document.write(text);
+            text = "";
+        }
+
+        text += text + "<br>";
+        document.write(text);
+        text = "";
+    }
+
+
+    for (a = size; a >= 0; a--) {
+
+        for (b = a; b < size; b++) {
+            text += "&nbsp ";
+            document.write(text);
+            text = "";
+        }
+
+
+        for (b = 1; b <= ((a * 2) - 1); b++) {
+            text += "*";
+            document.write(text);
+            text = "";
+        }
+
+        text += text + "<br>";
+        document.write(text);
+        text = "";
+    }
+</script>
+</body>
+</html>

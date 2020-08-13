@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let text = "";
+
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+            if(j<=i){
+                text += "*";
+            } else text+= "&nbsp ";
+        }
+        text += "<br>";
+        document.write(text);
+        text = "";
+    }
+    document.write("<br><br><br>")
+
+    for (let i = 0; i < 5; i++) {
+        for (let j = 5; j > 0; j--) {
+            if(j>i){
+                text += "*";
+            } else text+= "&nbsp ";
+        }
+        text += "<br>";
+        document.write(text);
+        text = "";
+    }
+    document.write("<br><br><br>")
+
+    for (let i = 0; i < 5; i++) {
+        for (let j = 4; j >= 0; j--) {
+            if(j>i){
+                text += " &nbsp ";
+            } else text+= "*";
+        }
+        text += "<br>";
+        document.write(text);
+        text = "";
+    }
+    document.write("<br><br><br>")
+
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j <= 5; j++) {
+            if(j<=i){
+                text += "&nbsp ";
+            } else text+= "*";
+        }
+        text += "<br>";
+        document.write(text);
+        text = "";
+    }
+    document.write("<br><br><br>")
+
+</script>
+</body>
+</html>

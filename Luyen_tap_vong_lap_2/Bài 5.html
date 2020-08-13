@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let presentValue=parseInt(prompt("Enter present value:"));
+    let month=parseInt(prompt("Enter month:"));
+    let rate=parseInt(prompt("Enter rate (%):"));
+    for(let i=0;i<month;i++){
+        presentValue += presentValue *rate/100;
+    }
+    alert("Future Value is: "+presentValue);
+</script>
+</body>
+</html>

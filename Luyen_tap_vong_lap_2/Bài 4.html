@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    let height=10;
+    let width=100;
+    let text="";
+    for(let i=0;i<height;i++){
+        if(i===0||i===height-1){
+            for(let j=0;j<width;j++){
+                text+="*";
+            }
+            text+="<br>";
+            document.write(text);
+            text="";
+        } else {
+            for(let j=0;j<width;j++){
+                if(j===0||j===width-1){
+                    text+="*"
+                } else{
+                    text+="&nbsp ";
+                }
+            }
+            text+="<br>";
+            document.write(text);
+            text="";
+        }
+    }
+</script>
+</body>
+</html>
